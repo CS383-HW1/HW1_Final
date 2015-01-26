@@ -1,0 +1,1814 @@
+\documentclass[12pt]{report}
+\usepackage{geometry}
+\usepackage{titling}
+
+\newcommand{\subtitle}[1]{
+	\posttitle{
+		\par\end{center}
+		\begin{center}\large#1\end{center}
+		\vskip0.5em}
+}
+\setcounter{tocdepth}{2}
+\title{Homework 1}
+\subtitle{CS 383 - Group 3}
+\author{
+Mason Fabel \\
+\and Morgan Holbart \\
+\and Ronald Rodriguez \\
+\and Tessa Saul \\
+\and Lance Wells \\
+\and Zachary Yama \\
+}
+\date{\today}
+\geometry{margin=1in}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+Document Typsetting and Editting: \textbf{Mason Fabel}
+\clearpage
+
+\chapter{Application Domain Study}
+
+\begin{section}{Related Applications}
+
+\begin{subsection}{Nethack - Mason Fabel}
+For the application domain study, I chose to study the classic roguelike
+game Nethack. I chose this title for a number of reasons. First of all,
+the roguelike genre is, if not the direct predecesor, the inspiration for
+the majority of tile-based dungeon crawling games, among others. This being
+so, I chose Nethack as it a mature and heavily-played roguelike.
+
+For my study, I am going to play a session of Nethack and record a
+condensed version of my adventures. I will then discuss the elements that
+I think can be used successfully in our project, followed by the elements
+that I think can not.
+
+\begin{subsubsection}{Gameplay}
+Nethack opens with a pretty straightforward selection of menus asking the
+player for their class, race, and gender. I selected a human male Tourist,
+as I am merely making a small tour of this game for this study. A short,
+three paragraph intro is dropped on me, telling me to descend the
+dungeon and fetch some amulet.
+
+And that's where the handholding stops. I'm dropped into the game with the
+oh-so-helpful message "Be careful!", and nothing else. Some quick fiddling
+will reveal that the various keypresses correspond to different actions,
+and that pressing '?' will bring up some very cryptic help. Fortunately,
+this is far from my first time in Nethack, so I'm over the gigantic
+learning curve needed to even make sense of the screen and perform basic
+actions.
+
+Thus, off I go, looking for the amulet. The game itself was pretty simple
+to watch. Explore the map, look for the stairs to go deeper, run away from
+monsters until my pet kills them and I loot the corpses. In this manner I
+cleared a few levels and then called it a day.
+\end{subsubsection}
+
+\begin{subsubsection}{The Good}
+There are a lot of good, fun elements to Nethack, even if I didn't come
+across too many of them in the short period I had to play and study it.
+Some of these features are a good match for the project we are making,
+while others are not so good.
+
+The first element of note which could be put to good use in our project
+is the fact that each dungeon level is randomly generated, and so are
+the items, to a certain extent. What Nethack does is layout a general
+level generation scheme (rectangular rooms connected by corridors during
+the early levels), and then randomly create floors which follow those
+rules. Thus, the game isn't at the complete mercy of the random generator,
+but can set and follow certain expectations while still providing variety
+and a unique experience each game.
+
+Furthermore, the item's are partially randomized. While each game of
+Nethack will have the same potion of acid, ring of levitation, or other
+items, but each game the effect of, say, the red potion is different.
+Play once, the red potion is healing. Play again, it's hallucination, or
+perhaps grease. While this particular mechanic hinges on the fact that a
+major part of a game of Nethack is discovering what your items are and
+what they do, the general principle of using controlled randomness to add
+variety to different playthroughs of the game is praiseworthy, and should,
+in my opinion, be used throughout our final project.
+\end{subsubsection}
+
+\begin{subsubsection}{The Bad}
+While Nethack is a fantastic game, some of it's features would translate
+extremely poorly over to our project. After all, Nethack is a single-player
+dungeon crawler with an emphasis on mechanical depth, and our project
+is a cooperative multiplayer game, which calls for what can be very
+different features.
+
+The most obvious feature to discard would the be the interface. While
+Nethack functions quite well once you grow accustomed to it, the controls
+are very obtuse and extremely difficult to learn. To further complicate
+the issue, most of the information regarding what is happening and all of
+the information regarding what actions the player can take are completely
+hidden, unless one already knows a complicated maze of menus and actions.
+When we build our project, we should make it very clear what is currently
+happening and what actions the player can respond with.
+
+Another feature of Nethack that should definitely be dropped from our
+project is permanent player death. In Nethack, if you die then your game is
+over, permanently, and you must start again. While that contributes in a
+large way to the charm of the game, this is completely out of place in a
+multiplayer game, where a single mistake could force the player out of an
+otherwise pleasant game. Furthermore, when playing with other people it
+is very often fun to compare progress and try to one-up your friends.
+Having the game threaten to wipe that out forever is typically not a good
+feature for such games.
+\end{subsubsection}
+
+\end{subsection}
+
+\begin{subsection}{Crawl - Morgan Holbart}
+I chose to conduct my domain study on the recently released beta version
+of the game ``Crawl''. It has some roguelike elements, but more closely
+resembles that of a dungeon crawler. The game is a multiplayer dungeon
+crawler where 4 players compete to reach level 10 and defeat the boss
+before the other players. 
+
+\begin{subsubsection}{Gameplay}
+The game has, as expected for its genre, very simple controls and graphics,
+the value of the game comes from its unique competitive nature and ever
+changing strategy. The twist to this dungeon crawler is that one player
+is a human, and the other 3 players play a the monsters in the dungeon. To
+start each player chooses a god to worship (which gives a passive bonus),
+and the game begins. One player is randomly selected and sent off to
+explore the dungeon.
+
+Once the player moves from room to room, the other players are given the
+ability to control monsters in the room and begin attacking the human
+player. They are rewarded blood points for damage dealt to the player, and
+the player is granted experience for killing monsters. The goal of the
+human is to try to get as much experience as possible to reach level 10
+and try to beat the boss, with careful consideration of the fact that the
+higher level he gets, when you move on to the next dungeon floor, every
+other player will get points to level up their monsters for every level
+the human gets. Once the human is killed, whoever dealt the killing blow
+will take place as human starting at level 1 (or the previous level he
+achieved) and can begin moving on.
+
+All the blood dealt as a monster can be turned to money as a human, and
+used to buy gear if you find the store that is on each level. The game
+balances itself out by making your monster stronger for every level
+another player gains, and by only being able to buy gear by earning money
+while playing as a monster.
+\end{subsubsection}
+
+\begin{subsubsection}{Good Ideas}
+The game is fast paced, there is limited setup and vast replayability. It
+is focused more on the competitive nature and goal of winning than it is
+the roguelike or RPG elements. If every player knows what they are doing,
+the games can end anywhere between 15 and 30 minutes with plenty of
+push-pull for first place.
+
+The game balances itself, for if you are a human for a long duration the
+monsters get enhanced, and if you are the monster for a long duration you
+will be enhanced until you surpass the other monsters and can more easily
+become the human.
+
+The game is procedurally generated and unpredictable, you never know what
+the room you are about to enter will have, it can have an assortment of
+traps (controllable by monsters also), monsters, and treasure.
+
+The game has a fairly strong AI, that in its hardest difficulty is fairly
+difficult to beat, and plays the game pretty similarly to a human, give or
+take a couple bumps in the behavior.
+\end{subsubsection}
+
+\begin{subsubsection}{Bad Ideas}
+The game has some balance issues most likely because of the beta state of
+the game. Some monsters are fairly  overpowered compared to others, and
+some of the gear can be overpowered, as well. Though careful selection of
+monster ugprades can help to counter certain weapons, you can only upgrade
+if you have points and at the end of each floor, so the unbalance can
+carry the human until he moves on to the next floor.
+
+The boss can be unbalanced based on the weapons and abilities available to
+the humans (which are randomly generated). A ranged weapon trivializes the
+boss, and a melee weapon is basically impossible to win with against any
+competent players because of how the boss is designed.
+
+Level 1 monsters are too weak, and whoever gets human first basically gets
+free reign over the first dungeon floor until people can upgrade the
+monsters.
+\end{subsubsection}
+
+\begin{subsubsection}{What Will Translate Well}
+The game is a floor based dungeon crawler that is both cooperative and
+competitive. Players are working together as monsters, but against the
+human, but because of the turn based nature of having control of the human,
+it can be difficult to form alliances, thus retaining the competitive
+balance. 
+
+The game did procedural generation very well, though sometimes it can be
+unbalanced if the current human lands health potions multiple rooms in a
+row and another does not.
+
+The game ends fairly quickly, which may or may not be good depending on how
+in depth we want the RPG elements to be, if we plan on a fairly low depth
+RPG system, the game has replayability and speedy gameplay down.
+
+Unlockables, based on the length of the game, you gain experience which
+unlocks new items, gods, and monsters for the game, this adds to the
+replayability, and allows you to add strategic depth over time, keeping the
+game simple to start and increasing the strategy as you play more and more.
+This also gives you a reason to play again (try a new item).
+\end{subsubsection}
+\end{subsection}
+
+\begin{subsection}{Teleglitch - Ronald Rodriguez}
+For my application domain study, I chose to study Teleglitch. Teleglitch 
+is a rogue-like top-down shooter/slasher action game. I chose this game 
+as I felt it was somewhat similar to our goal of a tile-based rpg without 
+``waiting'' battles.
+
+I will complete the first few levels of Teleglitch and record my thoughts 
+about which features I feel would and would not work for our 
+game. 
+
+\begin{subsubsection}{Gameplay}
+From the start menu of Teleglitch, the player can choose to play, read a 
+tutorial, or choose a level they have previously completed. Once the 
+user selects play/continue, they are dropped into the world. Players can
+move  the character around the screen using standard keyboard/mouse
+controls. 
+
+The way levels are designed and generated in Teleglitch is interesting. Not
+only are levels randomly generated each time the user plays, but there is a
+neat mechanic where most of the level remains hidden until your character 
+actually sees that section by navigating over to it. This causes great 
+moments of surprise when you travel to a new part of the level only to be 
+met by a horde of enemies. 
+
+The core of the gameplay comes in the form of killing enemies using various
+weapons. The character begins the game with a sword that he can use to
+melee  enemies with. Other weapons like guns and bombs are obtained via
+loot drops from downed enemies and item boxes. One of the main mechanics of
+the game comes in the form of being able to combine certain loot items into
+more useful weapons. For instance, you may find some nails in an item box
+at one point, and then a bit later find a baseball bat after you kill an
+enemy. The game allows you to simply combine these two items into a
+nail-bat which gives it a damage boost over a standard baseball bat. There
+are multitudes of these potential item combinations. 
+
+The game also incorporates elements of the survival horror genre in the
+form of ammo being somewhat of a rarity, encouraging the player to think
+very carefully about when they choose to use their guns insted of their
+melee weapons.
+\end{subsubsection}
+
+\begin{subsubsection}{The Good}
+The shooting mechanics in Teleglitch are exceptional. When a gun is fired
+at an enemy, a noticable ``blur'' effect happens to the character and the
+bullet itself. This effect adds a palpable ``weight'' to the shots, making
+them visceral, impactful, and highly satisfying. 
+
+The loot combining element is an excellent mechanic. It causes players to
+think critically about the potential ways they can combine the multitude of
+items in their inventory. A great sense of satisfaction comes when you
+think of a way to combine two things and the game allows you to do so
+exactly as you envisioned. 
+
+The level designs are very cool, having a very industrial, apocalyptic
+aesthetic. The levels are somewhat minimal in design, which lends well to
+the game overall, as there is rarely any unnecessary clutter obstructing
+you from attacking your foes or getting around the environment. 
+
+While it has been a complaint of many industry reviewers, I think the
+low-fi look of the game overall is quite charming. A game like this doesn't
+need to have super high-res graphics. I felt it would add almost nothing to
+the game at all. 
+\end{subsubsection}
+
+\begin{subsubsection}{The Bad}
+The application of ``ammo rarity'' in this game only ended up frustrating
+me, rather than giving me a feeling of tension. With Teleglitch, where the
+shooting is easily the highlight of the entire game, implementing a
+mechanic that lessens the amount of times you will use that awesome gunplay
+seems silly to me. 
+
+The melee combat in Teleglitch is nowhere near as satisfying as the
+gunplay. There is a noticable lack of ``feedback'' when the melee weapons
+connect with enemies, sometimes leaving you unsure if you actually hit the
+enemy at all, since most take more than one hit to kill.  
+
+In Teleglitch, when you want to see the whole map of the level you are
+currently on, you need to press a button that actually zooms out from the
+current room you're in and shows you the whole map. I felt this feature
+broke the immersion of the game. I think an onscreen mini-map that 
+could be toggled on and off would have been a much better choice both for
+Teleglitch and for our game.
+\end{subsubsection}
+
+\end{subsection}
+
+\begin{subsection}{Wanderlust: Rebirth - Tessa Saul}
+I chose to look at the tile-based RPG Wanderlust: Rebirth. I chose this
+game because of the games I already had, this one best fit the discription
+of what we are trying to do. This game has a single-player mode and a co-op
+mode with up to four people. 
+
+I played through the tutorial and first couple levels in single-player
+mode. 
+
+\begin{subsubsection}{The Good}
+This game has a simple and quick class selection system. There are four
+classes and two genders. Each combination has a detailed portrait. Besides
+that, the only thing you have to pick to make a new character is a name. 
+This makes starting a new co-op game very fast.  
+Leveling up was also very easy and fast. The game gives you points to
+distribute among your skills. Depending on how you place them, you could 
+probably have very different builds. The game has a `lobby' where you can
+reassign all of the points that you have earned into different builds, and
+then try them out. Another thing I liked about the game is that when I died
+multiple times, my character was stunned for a few seconds, and then I got
+to continue playing. I didn't even realize that I died until the end of
+the level when it deducted points for the death. This means that even if
+you are very bad at the game, it will not interrupt the fun you are having
+to point out how bad you are. The game fills in your abilities by giving
+you AI companions as well. This is nice because you do not have to play a
+class to have its abilities, like healing. 
+\end{subsubsection}
+
+\begin{subsubsection}{The Bad}
+The inventory and crafting systems in this game feel very clunky. The
+tutorial had me create an item from a recipe, but I had to select all the
+items for the recipe by hand in my inventory. This was frustrating because
+the items only had little icon type images to represent them, so I had to
+look at each item to see if it was one I needed for the recipe. If we have
+an inventory system, I think we should look at other games for ideas. 
+
+The controls on the game feel `spammy'. By this, I mean that you can pretty
+much press random buttons rapidly and get about the same result as if you
+planned out an attack. This is emphasized by the fact that if you play
+single-player, the game gives you three AI companions that are the other
+classes. They swarm around you when you hold still, and attack everything
+at the same time as you, so it is hard to see what you are doing. 
+\end{subsubsection}
+\end{subsection}
+
+\begin{subsection}{Binding of Isaac - Lance Wells}
+
+For my section regarding the application domain study, I have decided to
+review general concepts regarding our game's genre, in addition to drawing
+from specific examples introduced in popular ``Roguelights''.
+
+To begin, our general game concept runs closely in the vein of a
+traditional ``Roguelike'', that is, our game borrows several features from
+the genre introduced by the game Rogue. Included in our description
+specifically are:
+
+\begin{itemize}
+\item Tile-Based Aesthetic and Generation
+\item Dungeon Crawling Gameplay
+\item Role-Playing Game thematics
+\end{itemize}
+
+To facilitate the description of these items, the following is a list of
+interpretations of these features from the Roguelight ``Binding of Isaac''.
+
+\begin{itemize}
+\item \emph{Tile-Based Aesthetic and Generation}
+
+Binding of Isaac (or more recently, the Rebirth edition), features a
+tile-based dungeon layout. The game limits the range of tile-values to only
+a select few (Passable Terrain, Impassible Terrain, Destructible Terrain,
+Spikes), while altering tilesets throughout each themed floor set. This
+strategy effectively simplifies the gameplay while still allowing for a
+large variety of room layouts.
+
+\item	\emph{Dungeon Crawling Gameplay}
+
+Rather than adopting a standard free-movement-by-floor interpretation of a
+dungeon crawler. Binding of Isaac chooses to instead only display one
+``room'' at a time to the player. This effectively lowers the complexity in
+displaying an entire ``floor'' simultaneously while still maintaining a
+maze-like floor-by-floor dungeon crawler.
+
+\item	\emph{Role-Playing Game thematics}
+
+Binding of Isaac chooses to abandon conventional leveling systems while
+instead functioning on a skill-by-skill basis. Each character is influenced
+by a series of simple numeric-based "skills" that change the gameplay
+slightly (e.g. movement speed, projectile speed, luck, etc.).
+Simultaneously, a player may alter their experience by picking up various
+stat-altering or otherwise gameplay-altering items ranging from mild to
+extreme in effect. What more, Binding of Isaac maintains a small portion of
+``risky'' decisions often incorporated into roguelikes similar to
+random-effect pills, varying-effect  cards, and health-depleting ``Deals
+with the Devil''.
+\end{itemize}
+\end{subsection}
+
+\begin{subsection}{Quest of Dungeons - Zachary Yama}
+For my application domain study I chose to analyze the dungeon crawler,
+Quest of Dungeons. I chose this title because it’s a more recent, indie
+approach to the genre of dungeon crawlers and we will be approaching our
+game from the same sort of perspective. It also happens to be fairly
+popular, so it would be interesting to see what features make this game a
+successful dungeon crawler.
+ 
+The basis of this study will be drawn from a single 15 minute campaign
+session. Throughout the session I will record any important game features
+and interesting experiences I find. Once a reasonable list has been
+compiled I will break it into three sections: how the gameplay directs 
+the player, what elements could be included in our game, and elements that
+probably shouldn’t be included in our game.
+ 
+\begin{subsubsection}{Gameplay and Direction}
+On game launch, the player is presented with a generic and straightforward
+navigation menu. Once a campaign is started, the player is asked to pick a
+class. There are four choices: wizard, warrior, assassin, and shaman. After
+a class is selected, a short humorous cut scene is presented where the
+other three classes that were not selected suggest you take on the world’s
+most evil villain and plunge into his dungeon alone. Reluctantly the class
+that was chosen by the player exits the scene and the actual game begins.
+In my case, it was the Wizard.
+ 
+After being dropped into the game, I noticed a generic set of GUI elements:
+health, mana, a minimap, a place to set skills for quick use, and a set of
+buttons to open the inventory, stats, and quest menus. After playing with
+the keyboard for a bit all the movement controls become clear. The game
+uses WASD movement and a point and click system to perform actions.
+ 
+Now that I had an idea of how the mechanics worked I decided to go see if I
+could kill something. In fact I could; with giant fireballs. I also noticed
+there were many breakable objects lying around. Many yielded gold and even
+items and spells I could equip. After running around for a while I found a
+large stone that began a quest to kill so and so with some neatly included 
+directions. After spending about five minutes heading off on an interesting
+adventure I decided to be done and quit the game.
+\end{subsubsection}
+ 
+\begin{subsubsection}{Useful Features}
+Many of the features I experienced in Quest of Dungeons were really fun and
+interesting. Though, with such a short session my first impressions may not
+do all elements justice. Regardless, there are some elements that would
+blend well in our game, and others not so much.
+ 
+The most interesting thing I came across was the spell system. There aren’t
+any skills, you have to find them from drops. What’s particularly
+interesting is that you can use spells that seem more like something a
+warrior would use. The catch is that the spell does damage scaled off of a
+specific stat. For example, the fireball skill I had scaled off of
+intellect by a rating of B, where the rest of the stats it scaled off of
+were F.
+ 
+Another game element I found inspirational was the fast paced combat
+system. Monsters do only move when you do, but the way the game behaved was
+very polished and quick. This is somewhat attributed to the WASD movement
+and the snappy response of having an active spell that is used only by
+pointing and clicking. I didn’t need to select anything or think about what
+to do; I just did it.
+
+Lastly, the questing system was somewhat interesting. Being able to go out
+adventuring and randomly find a stone that gives you newfound direction was
+rather refreshing. It would be nice to include some sort of questing system
+in our game so that the player isn’t suck with just running around the
+dungeon waiting for the last level to come.  
+\end{subsubsection}
+ 
+\begin{subsubsection}{Harmful Features}
+This game was extremely fun to play, but my experiences were with a single
+player campaign. There are some components that clearly wouldn’t work for
+our multiplayer version, which is what we intend to do.
+ 
+One of these features is locking a player in a room. For a multiplayer
+system this would be more harmful than beneficial. If a party accidently
+overextends into a higher level room, they would likely die and 
+lose valuable experience and have to restart at no real fault of their own.
+There would also be inconvenient communication requirements to make sure
+that the whole party is ready to move on, and which room they decide as a
+whole to move to next. These two elements will needlessly slow down the
+players.
+ 
+Another feature that shouldn’t be included is permanent death. If a player
+dies, they are required to start completely over. This would prevent
+players from wanting to play with each other simply because they don’t
+know how prepared the other player really is. This again slows party
+progress and requires additional unnecessary communication.
+\end{subsubsection}
+\end{subsection}
+\end{section}
+
+\chapter{Project Design and Direction}
+
+\begin{section}{Individual Brainstorming}
+
+\begin{subsection}{Mason Fabel}
+Our project is to be ``a turn-based co-operative multiplayer
+'dungeon-crawl' role-playing game'', combining the ideas of an adventurous
+science fiction setting and the premise of a lowly office worker rising
+through the ranks to become the master of his own destiny.
+
+While contemplating these goals, I came up with a few central concepts and
+observations I would like to see incorporated into the final project.
+
+\begin{subsubsection}{Tone and Theme}
+While there are a lot of directions the overall tone and feel of this
+projecan take, I believe the best direction would be a lighthearted
+combination of comedy, in the vein of Douglas Adam's Hitchhiker's Guide to
+the Galaxy, and action/adventure, such as in Star Wars IV.
+
+Taking this approach instead of a realistic approach gives the team more
+freedom as to the shape of the final project. As we are not constrained by
+accurately simulating reality, we can instead focus on creating a game that
+is fun to play and avoid complicating areas that would not benifit from
+such attentions.
+
+Keeping a light tone will allow us to avoid dark or overly thoughtful
+material. While this things have a time and a place, the purpose
+of this project is to learn how to organize and create large pieces of
+software, not to create an artistic or philosophical statement. By avoiding
+such material, the focus is kept on the engineering, where it should be,
+instead of the content, which is a matter for a different class.
+\end{subsubsection}
+
+\begin{subsubsection}{Content Generation}
+The main purpose of this class is to learn software engineering, or how
+to organize and build large software projects. While we have chosen to do
+this in the form of a game, the purpose of this class is not game design,
+but rather building a large application. Thus, whenever possible this
+project should be moved away from creating game content and towards writing
+code and organizing the development process.
+
+To this end, I believe that as much game content should be generated on the
+fly by the application wherever possible. This obviously covers simple
+things, such as level layout, but it is not a hug jump of the imagination
+to take this same aproach to many, if not all, of the elements that will
+appear in the final product. Such examples may include NPCs, quest lines, or
+equipment, but wherever we wish to have more than a handful of types this
+sort of system is theoretically possible.
+
+In addition to taking the burden of content generation away from the group
+and giving it to the computer, this will have the further advantage of
+allowing the size of the project to be scaled up (or down) by creating
+different content generation methods for different sections of the final
+game.
+
+Finally, generating content will allow the final project, which is going to
+be created by a small team in a short period of time, to have a lot of
+content relative to programmer effort. Some finite amount of effort will
+allow the final product to have a much larger amount of content, as
+opposed to the more linear relationship involved when humans create
+content by hand.
+\end{subsubsection}
+
+\begin{subsubsection}{NPC Social Networking}
+Traditionally, most RPGs have used a system based upon levels and
+experience points. While this works well in a lot of settings, it seems to
+me that this transfers poorly over to the concept of the main character
+being an office worker.
+
+Thus, I would like to make progression in our final project not dependant
+upone collect experience or gaining levels, but rather on a ``social
+network'' of NPCs, for lack of a better term.
+
+The basic idea is pretty simple. You have some ``relationship value''
+with each NPC character. This value can be some positive or negative value,
+with positive values meaning they like the player and a negative value
+meaning they do not.
+
+In addition to relating to the player, NPCs would relate to each other by
+some percentage value between $-100\%$ and $100\%$. This would then serve
+to modify the player's relationship with that NPC.
+
+For example, the player has a $+50$ relationship with NPC A and a $-15$
+relationship with NPC B. NPC A has a $10\%$ relationship with NPC B, and
+NPC B has a $50\%$ relationship with NPC A. Thus, the player's final
+relationship value with NPC A is $50+0.1(-15)=48.5$, and the player's
+final relationship value with NPC B is $-15+0.5(50)=10$.
+
+As the number of NPCs increases, a increasingly complex and interesting web
+of characters can be created.
+
+Now suppose that NPCs were tied to plot events or player progression.
+Specifically, in order to advance further in the game, the player needs
+to be promoted within the office or organization they work for, and this
+can only be accomplished by gathering favor with their coworkers and
+managers.
+
+Furthermore, NPCs could be made to ignore the player until they reached
+some relationship threshhold, thus causing the player to build relationship
+with that NPS's ``friends'' in order to interact with them.
+
+Finally, some method of gaining relationship with NPCs would need to be
+implemented, whether a traditional ``kill 30 grues'' variety of quest or
+some other, more original, method.
+
+The result of this would be a varied and dynamic system (especially if this
+network of NPCs was also generated by the game instead of being hard coded)
+where the player is required to gain social goodwill until they finally
+come to the attention of the top entities, thus recieving the final
+promotion to CEO, or the final boss fight, or whatever the end game turns
+out to be.
+\end{subsubsection}
+\end{subsection}
+
+\begin{subsection}{Morgan Holbart}
+\begin{subsubsection}{Setting}
+As a cooperative or, at least, multiplayer game, the story and overlying
+setting of the game is not very important, I think the best blend of the
+predetermined sci-fi and bureaucracy themes would simply place the player
+in a world that combine the two with no overt explanation. For example,
+the player is an office worker in an alien immigration building.
+This gives a setting, a floor based ``dungeon'' (the building), and easily
+changeable enemies. The enemies can be any assortment of the aliens that
+come through the place, which means they can look like or do anything we
+decide to fit the game, instead of trying to stick to a certain lore.
+\end{subsubsection}
+
+\begin{subsubsection}{Game Design}
+The game will pit a player and his office colleagues into the immigration
+office with the desire to exterminate all of the aliens currently inhabiting
+the immigration office. You will work your way up starting from floor 1 to
+the top floor where the main boss will be. Each floor will have a multitude
+of mini bosses, enemies, loot rooms, and puzzles. Because of the procedural
+generation, each game will have an entirely different flow. The player and
+his colleagues should have to work together to solve each floor, finding and
+killing the miniboss to unlock the next level, and completing any puzzles
+to collect the superior loot to assist with the next floors.
+
+Because the game is multiplayer, permadeath is a difficult feature to
+implement, no one wants to wait for the game to end, so instead every time a
+player dies, when the next floor is reached by his allies, he will be
+revived with a reduced maximum health, if someone dies 3 or some number of
+times, the next death will be permanent. Any ally can however revive a dead
+player and sacrifice his maximum health to do so.
+
+The game will feature a variety of weapons, the basic weapons will be the
+human weapons, and will be the most common, you can find alien weaponry off
+the corpses of your fallen foes which is the second tier of loot, and the
+third tier of loot will drop from puzzles and mini bosses. All loot will be
+tradeable between party members.
+
+The progression system will be based purely on gear and floor number, there
+is no need for an XP system, the enemies will scale with their floor, as
+will the quality of loot drops.
+\end{subsubsection}
+
+\begin{subsubsection}{Game Technology}
+The game should have several mechanics that function to enhance the game and
+demonstrate our coding prowess. As a dungeon crawler, procedural generation
+is a must. All levels of the game should be procedurally generated, as
+should all items, possibly monster abilities/AI.
+
+The game should adopt multiplayer systems for both LAN and internet based
+gameplay, it can implement lobby based matchmaking, or direct IP connection,
+but should not require an authoritative server for controlling game logic. 
+This will leave the game open to hacking and potential cheating, but without
+any leaderboards and the desire for LAN support, this should be a non issue.
+Each client can most likely handle everything on its own, with one specific
+host that will manage the communication between the two.
+
+The game needs to have a sophisticated enough AI to support both
+singleplayer play (bot controlled allies) and enemies with a alterable
+difficulty to keep the challenge for players of all skill level. The AI
+logic will have to be controlled by the host client.
+\end{subsubsection}
+\end{subsection}
+
+\begin{subsection}{Ronnie Rodriguez}
+\begin{subsubsection}{Tone and Theme}
+As my collegue has stated, a solid mix of humor and sci-fi action would be
+an excellent direction to take the game in, especially since we have been
+asked to keep the content ``G and PG'' rated. 
+
+This begs the question, though, as to what brand of humor we should be
+trying to use. In many comedic workplace-set films and TV shows, like The
+Office, Office Space, Parks and Recreation, IT Crowd, etc., a palpable type
+of sarcastic, droll, and deadpan humor is used. It's almost as if the
+characters in these shows have just had all the life sucked out of them by
+their boring, unfulfilling work, and almost everything that exits their
+mouths is a bitter, sarcastic quip at something or someone. I think this
+type of humor could translate well into a corporate-office set game. I
+think it is entirely possible to do this, while keeping it PG rated. 
+\end{subsubsection}
+
+\begin{subsubsection}{Health Bar}
+In many hack-n-slash RPG games, increasing in level gives you a bonus to 
+your health bar. I think it would be cool to implement such a feature in
+our game, but with a comedic twist. 
+
+Assuming we adopt the deadpan style of humor popular in workplace-set
+comedies populated by characters who, for all intents and purposes, seem to
+have all but lost their will to go on, I think that instead of a ``health''
+bar, it would be funny to have ``will to go on'' bar. 
+
+For instance, instead of saying something like ``Health has been increased
+by 5'' after going up a level, we could have something like ``Your will to
+go on has slightly increased. So you got that going for you, which is
+nice\ldots'' after our character receives a promotion within the company.
+\end{subsubsection}
+\end{subsection}
+
+\begin{subsection}{Tessa Saul}
+I would like to see a game where you can rebuild your character to test
+choices. A lobby area where the player can arrearage the configuration of
+their modifications is a good match for that. In the lobby, the character
+cannot die, or cannot take damage. The lobby also has `training dummy' type 
+enemies that will persist through or reappear after player attacks. The
+lobby would allow the player to test out new parts in a safe area so they
+can maximize their effectiveness.
+
+In our group meetings, we talked about having the multi-player section of
+the game involve dungeon areas. This means that you do storyline advancement
+on your own, and then get your friends together to go fight off the
+bad-guys. We talked about the idea of going to cyberspace to fight off
+viruses, which would be the dungeon area. I like this idea because it means
+that no-one actually dies, or gets hurt which is in line with the G or PG 
+rating requirement. This idea is similar to a part of the game Shadowrun,
+where you also visit cyberspace to get secret information and fight viruses.
+In Shadowrun, you get to load different helper programs, hardware, and tools
+to help you before you dive in. I think it would be fun to implement
+different equipment pieces like these. 
+
+If we do a cyberspace centric game, I think it would be fun to gain skills
+in different programming languages, and things we have learned about in
+class. That way your character can make their own viruses to match up
+against the bad ones, or implement better coding techniques to thwart the
+bad-guys. I think it would be easier to come up with jokes about this topic
+because we all already know about it. Overall, this idea is flexible, so I
+hope we can put a part of it in the game.
+\end{subsection}
+
+\begin{subsection}{Lance Wells}
+The prompt in question asks that we merge two concepts:
+\begin{itemize}
+\item \emph{A Star-Warsish Sci-Fi in which you overthrow the evil empire}
+\item \emph{A lowly office worker fending off paperwork and bureaucracy to challenge the CEO}
+\end{itemize}
+
+Blending the two ideas brings about a few questions:
+Evil empire and a corporation to challenge? Why not work for the "bad guys"?
+Paperwork to fend off and a Star-Warsish Sci-Fi setting? Why not fend off 
+sentient paperwork?
+
+I also have a general storyline-concept that I would like to propose:
+
+\begin{center}
+\emph{It's the year 272820 and the remnants of the human race have been
+enslaved by the Conquesting and Expanding Organization, otherwise known as
+the CEO.}
+\end{center}
+
+The only clear goal of the CEO is to mitigate the human spirit, and
+assimilate the entirety of humanity into its dull corporation through the
+most horrifying weapon imaginable: paperwork.
+
+Maintaining a ``Will to Live'' (as per Ron's idea) is essential to surviving
+the work-ridden future. Only by fighting the MAN (Malevolent Autonomous
+Navigator), a super-intelligence deigned to direct the future of the Earth
+towards a grim and monotonous future can the player(s) rescue the Earth and
+avoid becoming soulless engines to a galactic war machine.
+\end{subsection}
+
+\begin{subsection}{Zachary Yama}
+\begin{subsubsection}{Story and Theme}
+I very much like the story written by our first two game idea entires. Much
+moreso than my own, but either way, here's my take on it.
+
+The basic premise of our game must include both office worker themes and
+sci-fi themes. The morphed combinational theme that comes to mind is of a
+scientist who develops weapons of mass destruction for a company you, the
+office worker, have deemed unethical and evil. The corruption of the company
+you work for is so expansive that you dare not to leave out of fear.
+However, because you aren’t the only scientist, you find yourself caught up
+in the evil mad scientists’ scene when you really don’t want to be. The only
+co-worker you’ve been friends with and ever enjoyed working with has
+accidently unleashed an aggressive stimuli into the complex because of
+reasons unknown. His dying act of kindness was to give you the only
+vaccination. Your quest is to make it to ground level and out safely
+(Underground working up? Tall building working down?), find out what
+happened to your friend’s bio-aggression project, and wipe out all infected
+individuals. All along the way you will be engineering and developing new
+weapons, traps, and dispatching strategies to take out mobs, solve puzzles,
+and defeat bosses.
+\end{subsubsection}
+
+\begin{subsubsection}{Building Weapons}
+An additional feature that I would like to propose is the way weapons are
+created and generated within the game. A good equipment system that feels
+alive is something that can really bring a lot to the table. Though random
+generation is an option, allowing the player to build something of their
+very own is equally if not more powerful. It creates additional immersion
+and charm to the game, and invites the player to continue somewhat soley for
+the sake of finding out what new cool weapon they can build by defeating
+the next enemy.
+
+For weapons and items, having the ability to construct your own from parts
+you've found throughout your adventures is extremely interesting. I've
+seen this done before in the game Loadout, which is a free third person
+shooter. It employs about 6 total parts for any weapon, which there are
+about 10 varaiations of. Each part will modify the behavior of the weapon in
+some way. For example, if you decided to use a scope you can zoom. If you
+decide instead to use a lazer scope, now you've got a lazer to aim with. The
+system would have to be altered to fit our game, but it wouldn't take that
+much effort to come up with several weapon designs that are not only
+customizable, but fun to play with. Having this kind of game element would
+bring a lot of personal attachment with it, making the player more immersed.
+The more fun the better, eh?
+\end{subsubsection}
+\end{subsection}
+\end{section}
+
+\begin{section}{Group Vision - Lance Wells}
+I have decided to write this section in terms of fictional prose in an 
+effort to more accurately describe the scenario without sounding too
+laborious in the process.
+
+\begin{subsection}{Setting}
+Nestled between the dusty bosom of Mars and the neo-genetic warlords of
+Venus lies the glorious visage of Earth, a bustling, cybernetic utopia whose
+chief export - human labor - drives the many corporate houses calling the
+blue, green, and gray planet home.
+
+One of the largest organizations on Earth, the Western Organization for
+Resurgent Knowledge (W.O.R.K.) is your newest employer. White-washed,
+colorless cubicles blanketed by flickering, fluorescent lights stretch for
+miles as your sleepless coworkers dawdle about their systems.
+
+Fortunately, escape from this bleak business purgatory is but keystrokes
+away. As an Information Technology Associate (of the future), your primary
+purpose in this business is to hunt-down and remove any pesky viruses
+infecting the systems of your associates.
+
+Neon-blue lines shift, pulsate, and shimmer as you enter the system of a
+sales associate from cubicle 28xA1x47, Martha. Gradually coming into focus,
+matrices of virtual wire outline your new surroundings. Walls and corridors
+begin to form and shift into a gradually expanding labyrinth. Just as you
+catch your breath, a dimly glowing red object comes into view, twitching
+menacingly.
+
+``A virus,'' you mutter to yourself as your right hand gradually shifts
+downwards towards the weapon holstered on your e-belt. A lime-green,
+glittering pistol reaches your fingertips. Pieced together meticulously from
+parts won from previous conquests, its forking barrel snaps into action. As
+you pull the trigger, four ``bit-lets'' jet towards the malware, twirling
+into a tightly-closed circle, a signature of the Wrought-I/Orn hammer which
+you so cleverly installed before this encounter.
+
+Numerous foes follow, each torn apart by the partnership of your ruthless
+trigger finger, and the weapon you endearingly refer to as ``Lucy''. Your
+conquest ends, rather heroically, to be greeted by the familiar, boisterous
+woman whose computer you have rid of the virtual invaders.
+
+Left with the satisfaction of your coworker's appreciation, you feel your
+efforts echoing across the cubicle space. Friends of your new ally, Martha,
+now refer to you as a ``friend'', and promotions begin to feel inevitable.
+Some day, you too aspire to face the mysterious figure at the head of
+W.O.R.K., known to all as ``The C.E.O''.
+\end{subsection}
+
+\begin{subsection}{Story}
+
+As a fresh-faced employee of the futuristic conglomerate known as
+``W.O.R.K.'', your goal is to locate and destroy any viruses infecting the
+systems of your coworkers. You, along with any other of your cohorts,
+cleanse systems through the use of virtual reality. By cleaning each system,
+you gain cybernated components for your digital arsenal in addition to 
+the networked affections of your coworkers.
+
+Your own intentions, however, lie with working your way up the corporate
+ladder to eventually face the shadowy head of the company, ``The C.E.O.''.
+A figure masked in infamy, little is known of The C.E.O. aside from the
+effectual manner in which the company is run.
+
+As you cut away infections from the workstations of your coworkers, the
+source and origin of the malodorous programming slowly reveals itself. The
+very same individual that determines the fate of your corporation is the one
+distributing the electronic diseases.
+
+Determined to stop this proliferation, you commit yourself to reaching the
+corporate office and challenging your supervisor. System after system, your
+skill as a malware-slayer grows in addition to the supply of friends that
+begin to network and rally behind you.
+
+Upon reaching the dark corporate ``castle'' of your dreaded executive
+handler, you enter to discover that the sinister force behind the computer
+plague is, itself, a computer. The final encounter of your journey, you
+quickly adorn your virtual equipment and venture into the mainframe of the
+baneful boss.
+
+The swirling den of your former commander bids you death as you soon learn
+that there is no easy solution to defeating this monster. A quick snippet of
+code crafted by your affectionate coworkers materializes into a new shape
+in your hands, the ``Information Terminator''. Like a magnet to a monitor,
+you have but one option, you must lay the transmitter atop the C.E.O.'s 
+sole weakness, the Malevolent Automation Node. As your mission becomes
+clear, lights flash across your screen, ``To defeat this otherwise
+impossible enemy, you must stick I.T. to the M.A.N.''.
+
+The moment you strike the node with your transmitter, everything ceases to
+move. All lights and motion slowly fall out of existence. Like black paint
+flecked along a picture, the world around you gradually fades into
+nothingness. Soon, all that is left is the booming voice of the former 
+Computerized Executive Officer repeating ``ERROR: SYSTEM MALFUNCTION:
+RECOMMEND REBOOT''. The cheers of your coworkers draw you back to reality,
+their exuberance can only mean one thing. As shapes and colors return to
+your vision, you glance at the monitor which had glared at you so
+threateningly before. A happy face, composed of few pixels illustrates the
+screen. Your victory is finally at hand.
+\end{subsection}
+
+\begin{subsection}{Mechanics}
+For our game, we have decided to include several key features:
+
+\begin{itemize}
+\item \textbf{Weapon Creation System}
+
+Our group has envisioned the weapons for our dungeon crawler to be 
+largely user-defined. By defeating dungeons, the user is able to piece 
+together various scraps and parts to form entirely new weaponry with 
+which to conquer a dungeon. While we have not discussed any hard-set 
+components, the concept maintains that the user will be able to craft 
+new items at a weapons terminal to take with them into instances.
+
+\item \textbf{Dungeon Lobby and Dungeon Instancing}
+
+Our imagined dungeon crawler will utilize a single "lobby" in which the 
+player is able to interact with their fellow office employees, group 
+together with other players, and create new weapons. The lobby in question 
+will resemble a modern office building, complete with grimy coffee stains 
+and irritating lighting.
+
+Entering a dungeon will consist of speaking with a given office worker, 
+and fulfilling their request to clean their system of a viral infestation. 
+Upon entering the ``dungeon'', the player will be joined by other players, 
+and will be able to begin hunting down and exterminating any rogue programs.
+
+\item \textbf{Employee Networking}
+
+Employees from our group vision are the entire source and lifeblood of the 
+office. Rather than implementing a generic leveling system, networking 
+with employees by completing specific quests and dungeons will grant the 
+player increased relations with that employee and any of their subsequent 
+friends. Forming a complex web, a player's coworker relations conceive a 
+unorthodox progression throughout the game, granting access to heretofore 
+unseen floors, areas, etc.
+\end{itemize}
+\end{subsection}
+\end{section}
+
+\chapter{Project Specification}
+
+\begin{section}{Use Cases}
+
+\begin{subsection}{Morgan Holbart}
+\begin{subsubsection}{Crafting Items}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player has the necessary ingredients to make a crafted item.
+\end{enumerate}
+
+\textbf{Summary}:
+
+The player takes ingredients for a crafted item and expends them to
+recieve a different item.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item Player opens crafting menu.
+\item Player selects crafting recipe.
+\item The items for the recipe are destroyed.
+\item The crafted item is placed in the player's inventory.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Dialog}
+\textbf{Actor}s: Player, NPC
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player is currently able to interact with the target.
+\item The target wishes to interact with the player.
+\item The NPC has something to say.
+\end{enumerate}
+
+\textbf{Summary}:
+
+A player tries to initiate conversation with an NPC.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The player interacts with the NPC.
+\item The NPC responds to the player.
+\item The player can respond based on user input.
+\item When the NPC runs out of things to say, the dialog ends.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Opening and Closing Inventory}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+ 
+\begin{enumerate}
+\item Player can currently perform the action of opening/closing inventory.
+\end{enumerate}
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The player presses the input to open/close the inventory.
+\item The inventory is loaded and displayed or closed .
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Starting Game}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+ 
+\begin{enumerate}
+\item Player is in the menu.
+\item Player is selecting the start game button.
+\end{enumerate}
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The player presses the input to start the game.
+\item The game loads the user save data.
+\item The game loads the lobby level with regard to the user save data.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Reload Weapon}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+ 
+\begin{enumerate}
+\item Player has a weapon equipped that can reload.
+\item Player has ammo to reload with.
+\end{enumerate}
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item Press the reload button.
+\item Subtract ammo from the stored ammo.
+\item Add the subtracted ammo to the current ammo.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Start Dungeon}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item Player is the leader of a dungeon group.
+\item Player is currently connected with all party members.
+\item Party members have all selected the ready button.
+\item Party members all have adequate reputation to do the dungeon.
+\end{enumerate}
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item Player interacts with the computer he wishes to enter.
+\item All other players are in party already, or join the party through the
+computer.
+\item The party leader presses the start dungeon button.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Attacking (with Ronnie Rodriguez)}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item Player has a valid weapon to use equipped.
+\item Player has ammo or durability to use equipped weapon.
+\item Player is able to attack (not in a current dialog/other interaction).
+\end{enumerate}
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The player presses the input to attack.
+\item Ammunition/Durability is subtracted.
+\item The weapon animation/effects/etc are instantiated.
+\item Amount of damage done per hit is subtracted from the enemy's total hit
+points.
+\end{enumerate}
+\end{subsubsection}
+\end{subsection}
+
+\begin{subsection}{Ronnie Rodriguez}
+\begin{subsubsection}{Opening Doors}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The door is able to be opened.
+\end{enumerate}
+
+\textbf{Summary}:
+
+Player tries to open a door to access area on the other side. 
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The player approaches the door.
+\item Once close enough to the door, the player presses input to attempt to
+enter.
+\item If door is unlocked, door opens and player is granted access to the
+area on the other side.
+\item If door is locked, a "locked" or "Need Key" prompt is output to the
+screen.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Killing an Enemy}
+\textbf{Actor}:
+
+Player, Enemy
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item Player is able to attack enemy.
+\item The enemy has a low enough armor rating to where the player's attacks
+are damaging it.
+\item Enemy can be killed.
+\end{enumerate}
+
+\textbf{Summary}:
+
+Player attacks enemy with weapon until enemy's hit points are
+completely depleted.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item Player gets close enough to enemy to attack either ranged or melee.
+\item Player depletes enemy's hit points before player's hit points are
+depleted by enemy.
+\item Enemy ceases attacking and enemy death animation is instantiated.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Using Keys and Codes}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item A door the player wishes to go through is currently locked.
+\item Player has needed key/code to unlock door in inventory.
+\end{enumerate}
+
+\textbf{Summary}:
+
+Player uses found keys or codes to unlock locked doors.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item Player gets close enough to door to interact with it.
+\item Player presses input to initialize unlocking procedure.
+\item ``Unlock door with key/code?'' prompt is displayed on the screen along
+with Yes or No choice.
+\item Player chooses Yes or No option.
+\item If player chooses No, prompt closes, door remains locked, and key/code
+remains in inventory.
+\item If player chooses Yes, ``Door Unlocked'' prompt displays to screen,
+door unlocks, and key/code is removed from inventory.
+\item Player initiates Open Door procedure (see above).
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Taking Damage}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item Player is being attacked by enemy.
+\item Player has a low enough armor rating to where they are able to be
+damaged by current enemy.
+\end{enumerate}
+
+\textbf{Summary}:
+
+Player is being attacked and is losing health/HP.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item Player is attacked by enemy.
+\item Depending on strength of enemy, an amount of damage is done to the
+player.
+\item Amount of hit points directly related to amount of damage done by
+enemy is subtracted from the player's total remaining health..
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Moving Items in Inventory}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item Player has an item(s) in inventory they'd like to rearrange.
+\end{enumerate}
+
+\textbf{Summary}:
+
+Player can manually rearrange items in inventory for better
+organization and quicker use.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item Player presses input to open inventory.
+\item Game action is paused while inventory is open.
+\item Player selects ``Rearrange'' option from inventory sidebar.
+\item Player presses input to select item they wish to move.
+\item Item selected is highlighted.
+\item Player navigates inventory and presses input to choose inventory slot
+they would like to move item to.
+\item If selected inventory slot is empty, item is moved to that slot,
+original slot holding the item is now empty.
+\item If selected inventory slot is occupied, selected item will swap places
+with item in occupied slot. 
+\end{enumerate}
+\end{subsubsection}
+\end{subsection}
+
+\begin{subsection}{Tessa Saul}
+\begin{subsubsection}{Moving through Areas}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player has the area being moved to unlocked or available to him.
+\end{enumerate}
+
+\textbf{Summary}:
+
+The player accepts a prompt moving him to a new dungeon, floor, or
+back to the lobby.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The player uses an object (door/computer).
+\item Player hits yes to the prompt on whether or not to use it.
+\item The player is moved from the current location to the new location.
+\item The new level is constructed (if a dungeon), or loaded (if the lobby)
+and the player is placed in it.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Selling Items}
+\textbf{Actor}:
+
+Player, Shopkeeper
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player has an item that the shopkeeper is willing to buy.
+\item The shopkeeper has sufficient currency for the transaction.
+\end{enumerate}
+
+\textbf{Summary}:
+
+Player exchanges an item for currency with a shopkeeper.
+
+\textbf{Steps}:
+ 
+\begin{enumerate}
+\item Player approaches shopkeeper.
+\item Player engages shop.
+\item Player selects item from their inventory to sell.
+\item Item is given to shopkeeper, currency is taken from shopkeeper and
+given to player.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Buying Items}
+\textbf{Actor}:
+
+Player, Shopkeeper
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The shopkeeper has an item that the player is willing to buy.
+\item The player has sufficient currency for the transaction.
+\end{enumerate}
+
+\textbf{Summary}:
+
+Player exchanges an currency for item with a shopkeeper.
+
+\textbf{Steps}:
+ 
+\begin{enumerate}
+\item Player approaches shopkeeper.
+\item Player engages shop.
+\item Player selects item from shopkeeper's inventory to buy.
+\item Item is given to player, currency is taken from player and given to
+shopkeeper.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Picking Up Items}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player has an empty slot big enough for the item in their
+inventory.
+\end{enumerate}
+
+\textbf{Summary}:
+
+A player's action transfers an item from the environment into their
+inventory.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item Player approaches item.
+\item Player engages item.
+\item Item is removed from environment.
+\item Item is placed in the player's  inventory.
+\end{enumerate}
+\end{subsubsection}
+\end{subsection}
+
+\begin{subsection}{Lance Wells}
+\begin{subsubsection}{Die}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player is actively playing the game and has just taken
+fatal damage.
+\end{enumerate}
+
+\textbf{Summary}:
+
+The player has taken fatal damage and now proceeds to die with a
+restart option.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The player takes some form of fatal damage.
+\item The player is then frozen on the spot, unable to interact with any
+surroundings.
+\item The player proceeds into a possible death animation for a few seconds.
+\item The player must then choose from a pop-up menu how they would like to
+proceed.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Leave a Dungeon}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player currently inside of a dungeon.
+\end{enumerate}
+
+\textbf{Summary}:
+
+The player leaves a dungeon through the use of a menu.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item1 The player presses a button that requests to leave the current
+dungeon.
+\item A confirmation window appears that prompts the player if they would
+like to proceed.
+\item If the player chooses to leave the dungeon again, they will switch
+to the main lobby.
+\item If the player chooses to remain in the dungeon, the prompt window will
+close.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Use an Item}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player currently has some usable item.
+\end{enumerate}
+
+\textbf{Summary}:
+
+The player actively uses some usable item.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The player either opens their inventory, or currently has a usable
+item equipped in some fashion.
+\item The player will indicate the specific item that they wish to use
+through some button combination or key press.
+\item The item then is removed from the player's inventory.
+\item The item's effect then occurs.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Change Current Weapon}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player currently has two or more selectable weapons.
+\end{enumerate}
+
+\textbf{Summary}:
+
+The player indicates a weapon to change and does so.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The player either opens their inventory or currently has two or more
+``equipped'' weapons.
+\item The player indicates a request as to which weapon to switch to through
+some key press.
+\item The player's active weapon is considered to no longer be active and
+potentially returned to their inventory.
+\item The player then either equips the newly indicated weapon or that new
+weapon is considered to be active.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Close the Game}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player has access to the menu that allows for the game to close.
+\end{enumerate}
+
+\textbf{Summary}:
+
+The player closes the game via an in-game menu option.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The player indicates a request to leave via some button press.
+\item A pop-up window appears requesting the player to confirm that they
+would like to close the game.
+\item If the player should proceed, the program will (potentially) auto-save
+and then close entirely.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Select an Item from Inventory}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player is currently at the main menu.
+\end{enumerate}
+
+\textbf{Summary}:
+
+The player selects an option via some button press that reacts
+appropriately.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The player is selects some menu option with a button press.
+\item The menu either then disappears and is replaced with another menu, or
+closes and reacts according to the user's request.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Level Up}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player has all requirements to achieve an increase in level
+\item The player is currently in the lobby.
+\end{enumerate}
+
+\textbf{Summary}:
+
+The player moves (literally) up a level in progress.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The player is informed through some message that they are now eligible
+for an advancement in their level.
+\item The player makes a request with some NPC that they would like to
+advance a level.
+\item The player's current reputation is now adjusted to mirror their
+current level.
+\item The player is physically adjusted up one level of the office building.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Increase Stats}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player has alterable stats that can be changed through some
+action.
+\end{enumerate}
+
+\textbf{Summary}:
+
+The player makes a request for a stat adjustment through some
+method and is altered in kind.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The player makes a request to change stats through an item being
+equipped or unequipped or otherwise.
+\item The player's request is processed and the player's stats are changed
+to mirror the request.
+\end{enumerate}
+\end{subsubsection}
+\end{subsection}
+
+\begin{subsection}{Zachary Yama}
+\begin{subsubsection}{Equip and Item}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+ 
+\begin{enumerate}
+\item The player has the status to equip the item. 
+\item The item is in their inventory.
+\end{enumerate}
+
+\textbf{Summary}:
+
+A player's action transfers an item from their inventory to their
+equipment.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item Player has the item.
+\item Player selects an equip action.
+\item Item is removed from inventory.
+\item Item is placed in equipment.
+\item Item(s) currently in equipment occupying the spaces required to eqiup
+the new item are moved to inventory.
+\item If the item(s) being swapped out assume more inventory space then the
+player has, ignore/undue the equip action.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Look at Stats}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player selects the status menu icon.
+\end{enumerate}
+
+\textbf{Summary}:
+
+Input from the player opens the status menu.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item Player selects stats menu icon.
+\item The status window is opened.
+\item Status information is read and loaded into the window.
+\item Stat alteration actions are deactivated or activated depending on
+status point availability.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Look at Map}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player toggles the map menu icon.
+\end{enumerate}
+
+\textbf{Summary}:
+
+Input form the player opens the map menu.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The player selects the map menu icon.
+\item The map menu is opened.
+\item Player coordinates are set as a map rendering position.
+\item The surrounding level content is loaded into the map.
+\item Explored content is displayed.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Hit a Monster}
+\textbf{Actor}:
+
+Player, Monster
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player has attacked.
+\item The player's attack hitbox hit a monster.
+\end{enumerate}
+
+\textbf{Summary}:
+
+A player has performed the action to attack, and successfully hit
+an enemy.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item Calculate active collisions to determine if the enemy was hit.
+\item The damage delt is calculated based on player and monster attributes.
+\item Damage is deducted from the monster's health. 
+\item Any elemental or otherwise behavior altering elements are applied to
+the monster.
+\item  If the monster's health is zero, the monster's status is changed to
+dead.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Kill a Monster}
+\textbf{Actor}:
+
+Player, Monster
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player has reduced a monster's health to zero.
+\end{enumerate}
+
+\textbf{Summary}:
+
+A monsters health has been reduced to zero, and is dead.
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The monster's hitbox is no longer active.
+\item Any active AI is no longer active.
+\item A death animation is played.
+\item The displayed sprite is changed to represent a dead enemy.
+\item The status of the enemy is set to dead, and any ressurection elements
+are set to applicable.
+\item The enemy is determined to be permanatly dead.
+\item Any items to drop are generated.
+\item The item is instanciated and dropped.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Level Up}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player has the required experience (Reputation?) to level up.
+\end{enumerate}
+
+\textbf{Summary}:
+
+A player has gained enough experience to increase their level. 
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The experience level is compared to the amount required to level up. 
+\item If the experience level is high enough, the player's level is
+increased by 1.
+\item Usable stats points are awarded to the stats class. 
+\item The expereince bar size is recalculated.
+\item The current amount of experience is reduced to zero plus any
+additional experience carryover.
+\item A levelup indicator is displayed.
+\item Health is regenerated.
+\end{enumerate}
+\end{subsubsection}
+
+\begin{subsubsection}{Increase Stats}
+\textbf{Actor}:
+
+Player
+
+\textbf{Preconditions}:
+
+\begin{enumerate}
+\item The player has available status points to spend.
+\end{enumerate}
+
+\textbf{Summary}:
+
+A player has unspent stats points and expends them. 
+
+\textbf{Steps}:
+
+\begin{enumerate}
+\item The player selects a stat to increase.
+\item The amount of points required to increase a stat are calculated.
+\item If a stat requires more points than available, its increase action is
+deactivated.
+\item If there are enough points to expend, available stats points are
+reduced accordingly.
+\item The stat is increased. 
+\item Steps 1 to 5 are repeated for every action until all stats points are
+expened.
+\item Any remaining points are saved.
+\end{enumerate}
+\end{subsubsection}
+\end{subsection}
+\end{section}
+
+\end{document}
